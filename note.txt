@@ -1,0 +1,4 @@
+Unfortunately, this API is seriously limited by the list of keys that can be registered. 
+From your developer.chrome.com link:
+"Supported keys: A-Z, 0-9, Comma, Period, Home, End, PageUp, PageDown, Space, Insert, Delete, 
+Arrow keys (Up, Down, Left, Right) and the Media Keys (MediaNextTrack, MediaPlayPause, MediaPrevTrack, MediaStop)."

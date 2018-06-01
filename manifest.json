@@ -1,0 +1,57 @@
+{
+	"manifest_version": 2,
+	"name": "CtrlMusic",
+	"description": "Integrates OS media keys with in browser streaming.",
+    "version": "1.0",
+
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"permissions": [
+        "tabs",
+				"http://*/",
+				"https://*/"
+    ],
+
+    "browser_action": {
+        "default_icon": "small-icon.png",
+        "default_title": "CtrlMusic",
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "16": "small-icon.png"
+    },
+
+    "commands": {
+        "play_pause_playback": {
+            "suggested_key": {
+                "default": "MediaPlayPause"
+            },
+            "description": "Toggles playback of current track.",
+            "global": true
+        },
+        "stop_playback": {
+            "suggested_key":{
+                "default": "MediaStop"
+            },
+            "description": "Stops playback of current track.",
+            "global": true
+        },
+        "next_track": {
+            "suggested_key": {
+                "default": "MediaNextTrack"
+            },
+            "description": "Skips to next track.",
+            "global": true
+        },
+        "prev_track": {
+            "suggested_key": {
+                "default": "MediaPrevTrack"
+            },
+            "description": "Skips to next track.",
+            "global": true
+        }
+    }
+}
