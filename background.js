@@ -20,7 +20,11 @@ var supported_sources = [
   { url: 'https://music.youtube.com/*', jseventhandle: '', potential_sources: []}
 ]
 
-/* Enumerate all the supported sources */
+/** 
+ * Enumerate all the supported sources
+ * store them in their respective array
+ */
+
 supported_sources.forEach(function (supported_source) {
   chrome.tabs.query({ url: supported_source.url }, function (tabs) {
     result.forEach(function (result) {
@@ -33,6 +37,9 @@ supported_sources.forEach(function (supported_source) {
 // TODO define this page and how it functions
 chrome.tabs.create({ url: '', active: true }, function (tab) { return })
 
+/**
+ * Add the chrome listener for the chosen source type/tab
+ */
 chrome.commands.onCommand.addListener(function (command) {
   chrome.tabs.executeScript(chosen_source.tab.id, {
     code: 'var button_type = "' + command + '"'
