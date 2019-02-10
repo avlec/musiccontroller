@@ -34,7 +34,7 @@ supported_sources.forEach(function (supported_source) {
 
 /* Present users with source options. */
 // TODO define this page and how it functions
-chrome.tabs.create({ url: 'options.html', active: true }, function (tab) { return })
+chrome.tabs.create({ url: 'html/options.html', active: true }, function (tab) { return })
 
 /**
  * Add the chrome listener for the chosen source type/tab
