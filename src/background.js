@@ -4,7 +4,8 @@
  */
 var chosen_source = {
   tab: null,
-  jseventhandle: ''
+  jseventhandle: '',
+  playing: false
 }
 
 /**
@@ -38,11 +39,12 @@ chrome.tabs.create({ url: 'html/options.html', active: true }, function (tab) { 
 
 /**
  * Add the chrome listener for the chosen source type/tab
+ *  loads the command into JS
+ *  runs script that will grab info and make decissions
  */
 chrome.commands.onCommand.addListener(function (command) {
   chrome.tabs.executeScript(chosen_source.tab.id, {
-    code: 'var button_type = "' + command + '"'
-  }, function () {
-    chrome.tabs.executeScript(chosen_source.tab.id, { file: chosen_source.jseventhandle })
+    code: 'var command = "' + command + '"',
+    file: '/src/mediacontrollercallback.js'
   })
 })
