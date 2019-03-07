@@ -10,18 +10,24 @@
 
 	"permissions": [
         "tabs",
-				"http://*/",
-				"https://*/"
+		"http://*/",
+        "https://*/",
+        "storage"
     ],
 
     "browser_action": {
-        "default_icon": "resources/images/small-icon.png",
+        "default_icon": "icons/small-icon.png",
         "default_title": "CtrlMusic",
-        "default_popup": "source/html/popup.html"
+        "default_popup": "html/popup.html"
     },
 
     "icons": {
-        "16": "resources/images/small-icon.png"
+        "16": "icons/small-icon.png"
+    },
+
+    "options_ui": {
+        "page": "html/config.html",
+        "open_in_tab": false
     },
 
     "commands": {
